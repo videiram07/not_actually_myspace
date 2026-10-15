@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Not Actually mySpace</title>
+        <style type="text/css">
+            /*background*/
+            body{
+                background-image:url(website_background_stars.jpg);
+                width:1728px;
+                height:2579px;
+                margin:0;
+                padding:0
+            }
+            /*traditional myspace page topper*/
+            .navigation{
+                background-image:linear-gradient(to bottom right, rgba(67, 97, 238, 1), black);
+                width:1728px;
+                margin:0;
+                padding:0
+            }
+            /*logo and search bar*/
+            .nav_top{
+                display:flex;
+                align-items:center
+            }
+            .navigation img{
+                width:318px;
+                padding:10px;
+                padding-left:20px;
+            }
+            /*nav bar topics*/
+            .navigation p{
+                color:white;
+                font-family:Arial, Helvetica, sans-serif;
+                background-color:white;
+                 border-top-left-radius:9px;
+                border-bottom-left-radius:9px;
+                width:615px;
+                height:54px;
+                margin-left:764px
+            }
+            .bar{
+                display:flex;
+                margin:0;
+                padding:0;
+                background-image:linear-gradient(to bottom,rgba(67, 97, 238, 1),black);
+                width:1728px
+            }
+            .bar h2{
+                padding-left:25px;    
+            }
+            .bar h2 a{
+                color:white;
+            }
+            .bar h2 a:hover{
+                color:rgba(247, 37, 133, 0.8);
+            }
+            .a:visited{
+                text-decoration:none;
+            }
+            /*myspace profile picture*/
+            .top img{
+                width:282px;
+                justify-content:right;
+                margin-left:62px
+            }
+            /*profile picture and about*/
+            .top{
+                display:flex;
+                align-items:center;
+                margin-top:62px;
+                margin-left:40px
+            }
+            .player_and_boxes{
+                display:grid;
+                grid-template-columns: 650px auto;
+                grid-column-gap: 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            }
+            .player_container{
+                background-image:linear-gradient(rgba(255, 89, 165, 1),rgba(247, 37, 133, 1.0));
+                margin:40px;
+                margin-left:300px;
+                margin-top:226px;
+                padding:0;
+                box-sizing:border-box;
+                width:666px;
+                height:660px;
+            }
+            .player_container_top{
+                background-image:linear-gradient(rgba(247, 37, 133, 1.0),rgba(137, 6, 66, 1));
+                padding-top:20px;
+                padding-left:5px
+            }
+            .song_info{
+                font-family:Arial, Helvetica, sans-serif;
+                background-color:rgba(11, 32, 39, 1);
+                border-radius:10px;
+                width:292px;
+                height:100;
+                margin:15px
+            }
+            .song_title p{
+                size:20px;
+                margin:20px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:white;
+                font-weight:bold
+            }
+            .song_box h3{
+                margin:20px;
+                size:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:white
+            }
+            hr{
+                display: block;
+                height: 1px;
+                border: 0;
+                border-top: 1px dotted;
+                margin-left:10px;
+                margin-right:10px;
+                padding: 0;
+                color:black
+            }
+            .song_box p{
+                margin:20px;
+                size:15px;
+                line-height:10px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:rgba(210, 255, 181, 1)
+            }
+            .artist_name p{
+                margin:20px;
+                size:15px;
+                color:white
+            }
+            .controls_info{
+                display:inline-flex;
+                justify-content:center;
+                align-content:center
+            }
+            .controls{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:5px
+            }
+            .control-btn{
+                width:65px;
+                height:57px;
+                background-color:transparent;
+                border-color:transparent;
+                cursor:pointer
+            }
+            .control-btn img{
+                width:65px;
+                height:65px
+            }
+            .volume_icon img{
+                width:25px;
+                height:25px
+            }
+            .volume_section{
+                display:flex;
+                margin-left:30px; 
+            }  
+            .slider {
+                -webkit-appearance:none;
+                -moz-appearance:none;
+                width:262px;
+                height:4px;
+                margin-left:20px;
+                outline:none;
+                background-color:black;
+            }
+            .slider::-webkit-slider-thumb{
+                -webkit-appearance:none;
+                -moz-appearance:none;
+                appearance:none;
+                width:46px;
+                height:30px;
+                cursor:pointer;
+                z-index:10;
+                position:absolute;
+                margin-left:50px;
+                background-image:url(volume_bar-2.png);
+                margin-bottom:30px;
+                margin-top:-15px
+            }
+            /*.slider_thumb{
+                -webkit-appearance:none;
+                width:46px;
+                height:30px;
+                background-image:url(volume_bar-2.png);
+                scale:75%;
+                cursor:pointer;
+                z-index:10;
+                margin-left:50px
+            }*/
+            /*myspace 300 million registered users*/
+            .about_box{
+                background-color:rgba(247, 37, 133, 0.8);
+                padding-left:20px;
+                padding-right:20px;
+                padding-top:15px;
+                padding-bottom:15px;
+                margin-left:36px;
+                width:435px;
+                height:fit-content
+            }
+            /*contacting myspace and myspace url*/
+            .middle{
+                display:flex;
+                flex-direction:column;
+                flex-wrap:wrap;
+                height:450px;
+                margin-top:-575px
+            }
+            /*interests blog posts other people and comments*/
+            .bottom{
+                display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 22px;
+            row-gap:600px    
+            }
+            .bottom img{
+                width:120px;
+                margin:30px
+            }
+            .part_1 h1, .part_2 h1{
+                line-height:1.0;
+                margin-left:30px
+            }
+            .part_1, .part_2{
+                display:flex
+            }
+.flip_card, .flip_card1{
+background-color:transparent;
+margin-top:40px;
+    margin-left:40px;
+    margin-bottom:40px;
+  height: 100px;    
+  perspective: 1000px;     
+}
+.flip_card1{
+  width: 920px;
+}
+.flip_card{
+  width:740px;
+}
+/* This container is needed to position the front and back side */
+.flip_card_inner{
+  width: 100%;
+  height:fit-content;
+    align-content:center;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip_card:hover .flip_card_inner, .flip_card1:hover .flip_card_inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.front_side_1, .back_side_1 {
+  position: absolute;
+  width: 100%;
+  height:fit-content;
+}
+/*standards for all flipboxes*/
+.front_side_1, .back_side_1, .front_side_0, .back_side_0, .front_side, .back_side, .front_side_2, .back_side_2{
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-style:solid;
+    background-color:rgba(133, 66, 199, 0.8);
+    border-width:10px;
+    border-top-width:30px;
+    border-color:rgba(59, 14, 103, 0.8);
+}            
+.front_side_0, .back_side_0{
+  position: absolute;
+  width:902px;
+  height:350px;
+}                   
+.front_side, .back_side{
+  position: absolute;
+  width:720px;
+  height:650px;
+}
+.front_side_2, .back_side_2{
+  position: absolute;
+  width:720px;
+  height:350px;
+}            
+            
+            .front_side_1{
+                width:902px;
+            }
+            .front_side{
+                text-align:center;
+                align-content:center
+            }
+            .back_side_1{
+                width:902px
+            }
+            .back_side_1 a{
+                color:rgba(210, 255, 181, 1)
+            }
+            .back_side_1 a:hover{
+                color:white
+            }
+            .back_side, .back_side_1, .back_side_0, .back_side_2{
+                text-align:left;
+                transform: rotateY(180deg);
+            }
+            .front_side_0, .front_side_1, .front_side_2{
+                text-align:center;
+                align-content:center;
+                transform:rotateY('180')
+            }
+            h1{
+                color:white;
+                size:32px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                line-height:0.1
+            }
+            h2{
+                color:white;
+                size:20px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            p{
+                color:rgba(210, 255, 181, 1);
+                size:20px;
+                font-family:Arial, Helvetica, sans-serif;
+                line-height:1.0
+            }
+        </style>
+    </head>
+    <body>
+        
+    <div class="page container">
+        <div class="navigation">
+            <div class="nav_top">
+                <a href="https://myspace.com" target="_blank"><img src="myspace_logo.png"></a> <div class="search"><p>nothin to see here</p></div>
+            </div>    
+        <div class="bar"><h2><a href="https://en.wikipedia.org/wiki/Myspace" target="_blank">Start</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target="_blank">Explore</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target="_blank">Search for people</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target="_blank">Forums</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target=_blank>Music</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target="_blank">Video</a></h2>
+        <h2><a href="https://en.wikipedia.org/wiki/Myspace" target=_blank>More</a></h2>  
+        </div>  
+        </div>
+        <div class="player_and_boxes">
+            <div class="top">
+            <img src="myspace_pfp.png">
+            <div class="about_box">
+            <h1>myspace</h1>
+                <p>300 million registered users!</p>
+                <p>Here to make meeting people, showing off your best photos, and saving memories easier!</p>
+                <p>Last login: October 5, 2024 (read only mode since :[ ).</p>
+            </div>
+        </div>
+        <div class="player_container">
+        <div class="player_container_top">
+        <div class="controls_info">    
+        <div class="controls">
+        <button class="control-btn">
+            <img src="stop_button.png">
+            </button>
+        <button class="control-btn">
+            <img src="back_button.png">
+            </button> 
+        <button class="control-btn play-btn">
+            <img src="play_button.png">
+            </button>
+        <button class="control-btn">
+            <img src="pause_button.png">
+            </button>    
+        <button class="control-btn">
+            <img src="skip_button.png">
+            </button>    
+            </div>
+            <div class="song_info">
+                <div class="song_title"><p>Nobody Puts Baby in the Corner (Acoustic)</p></div>
+                <div class="artist_name"><p>Fall Out Boy</p></div>
+            </div>
+            </div>
+        <div class="volume_section">
+            <div class="volume_icon">
+            <img src="sound%20icon.png">
+            </div>
+            <div class="slider_thumb">
+            </div>
+            <div class="volume_bar">
+                <input type="range" min="0" max="100" value="100" step="1" class="slider"> 
+                </div>
+            </div>
+            </div>
+            <div class="player_container_bottom">
+                <div class="song_box">
+                <h3>Nobody Puts Baby in the Corner (Acoustic)</h3>
+                    <p>Download</p></div>
+                <hr/>
+                <div class="song_box"><h3>Hands Down</h3>
+                    <p>Download</p></div>
+                <hr/>
+                <div class="song_box"><h3>No. 5</h3>
+                    <p>Download</p></div>
+                <hr/>
+                <div class="song_box"><h3>Rabbits are Roadkill on Rt. 37</h3>
+                    <p>Download</p></div>
+                <hr/>
+                <div class="song_box"><h3>Every Man Has a Molly</h3>
+                    <p>Download</p></div>    
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+        <div class="flip_card1">
+            <div class="flip_card_inner">
+        <div class="front_side_0">
+        <h1>Contacting myspace:</h1>    
+        </div>
+        <div class="back_side_0"> 
+        <h1>eUniverse</h1>
+        <p>(2003-2005) The original creators of the site, created the site in 10 days and launched it into popularity through contests to see which employee can acquire the most users</p>    
+        <h1>News Corp.</h1>  
+        <p>(2005-2016) purchased the site for $580 million USD and the site continued to row exponentially to form its peak years, eventually declining in later years due to competition of Facebook</p>    
+        <h1>Time Inc.</h1>
+            <p>(2016-2018)</p>  
+        <h1>Meredith Corporation</h1>
+            <p>(2018-2019)</p>
+        <h1>Viant Technology Holding Inc.</h1>
+            <p>(2019-current)</p>    
+                </div> </div></div></div>
+        <div class="flip_card1">
+            <div class="flip_card_inner">
+        <div class="front_side_1">
+        <h1>MySpace url:</h1>
+        </div>
+        <div class="back_side_1">
+        <h1><a href="https://myspace.com" target="_blank">https://myspace.com</a></h1>
+                </div></div></div>
+        
+        </div>
+        <div class="bottom">
+        <div class="flip_card">
+            <div class="flip_card_inner">
+        <div class="front_side">
+        <h1>Interests:</h1>
+        </div>
+        <div class="back_side">
+        <h1>YouTube</h1>
+            <p>In 2005, users were given the ability to embed YouTube videos into their profiles (this was later removed as the feature posed a threat to MySpace Videos service, then added when a mass number of users protested this choice).</p>
+        <h1>Music</h1>
+            <p>When myspace was sold to News Corporation in 2005, its owners launched their record label 'Myspace Music' where artists were able to upload songs, EPs, and albums.</p>
+        <h1>MySpaceTV</h1>
+            <p>MySpace partnered with various companies over the years to provide audio, video, and print content to the site. The most notable collaborations were with National Geographic, the New York Times, and The Onion. In 2008, MySpace launched a web channel on MySpaceTV and signed deals to create programs of running series.</p>
+        <h1>Special Feature</h1>
+            <p>info here :p</p>
+        <h1>Recommendation Engine</h1>
+            <p>In 2010, the site added a recommendation engine for users that recommended games, music, and videos based on user search history.</p>    
+        <h1>Radio</h1>
+            <p>For a short period of time, users were able to play Myspace radio channels from their device while using the app version, switching between genre stations, featured stations, and artist stations. With this feature, users were able to build their own station by connecting and listenging to songs on the desktop website. </p>    
+            <p>How site was used!</p>
+                </div></div></div>
+        <div class="flip_card">
+            <div class="flip_card_inner">
+        <div class="front_side">
+        <h1>Blog Posts:</h1>
+        </div>
+        <div class="back_side">
+        <h1>Update #1: August 1,2003:</h1>
+            <p>The site was launched as the first social network to reach a glocal audience. The site became a major influence on technology, pop culture, music, and entertainment companies.</p>
+        <h1>Update #2: 2005-2009:</h1>
+            <p>myspace became the largest social networking site in the world!</p>    
+        <h1>Update #3: June 2006:</h1>
+            <p>The site was the most visited website in the US, surpassing Google Search.</p>    
+        <h1>Update #4: mid-July 2007</h1>
+            <p>myspace became the largest social networking site in every European country it was introduced into.</p> 
+            <h1>Update #5: May 2009:</h1>
+            <p>The number of myspace users decreased steadily as Facebook increased visits.</p>         
+        <h1>Update #6: March 2011:</h1>
+            <p>The number of users per month fell by 30 million users in the span of a year, preventing any deals about the site being made.</p>         
+        <h1>Update #7: mid-2013:</h1>
+            <p>The site is redesigned to be optimized with tablet screens. Unfortunately, this update deleted old blog posts.</p> 
+            <h1>Update #8: May 2016:</h1>
+            <p>The data for almost 360 million accounts was leaked, including email addresses, usernames, and passwords. </p>         
+        <h1>Update #9: March 2019:</h1>
+            <p>The website lost all content after a faulty server migration.</p>         
+                </div></div></div>
+        <div class="flip_card">
+            <div class="flip_card_inner">
+        <div class="front_side_2">
+        <h1>Other People:</h1>
+        </div>
+        <div class="back_side_2">
+        <div class="part_1">
+            <img src="chris_dewolfe.jpg">
+            <h1>Chris DeWolfe (Co-Founder, CEO)</h1></div>
+        <div class="part_2">
+            <img src="tom_anderson.jpg">    
+        <h1>Tom Anderson (Co-Founder, President)</h1></div>    
+                </div></div></div>
+        <div class="flip_card">
+            <div class="flip_card_inner">
+        <div class="front_side_2">
+        <h1>Comments:</h1>
+        </div>
+        <div class="back_side_2">
+        <h1>2026 Revival?</h1>
+        <p>The Vanderhook brothers are interviewed in which they say they "kept the brand for a future potential relaunch". As of early October 2026, the site has been down for unknown reasons.. One can only speculate if the revival is coming sooner than expected...</p>    
+                </div></div></div></div>
+        </div>
+    </body>
+</html>
